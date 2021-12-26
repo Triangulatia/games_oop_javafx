@@ -24,8 +24,7 @@ public final class Logic {
         for (Cell source: steps) {
             for (Figure figure : figures) {
                 if (figure != null
-                        && figure.position().getY() == source.getY()
-                        && figure.position().getX() == source.getX()) {
+                        && figure.position().equals(source)) {
                     throw new OccupiedCellException();
                 }
             }
